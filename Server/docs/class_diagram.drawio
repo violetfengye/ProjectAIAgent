@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-31T10:00:00.000Z" agent="Mozilla/5.0" version="21.6.6" type="device">
+  <diagram id="class-diagram" name="类图">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- User类 -->
+        <mxCell id="3" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="160" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="- id: Integer&#xa;- username: String&#xa;- email: String&#xa;- password: String&#xa;- avatar: String&#xa;- bio: String&#xa;- date_joined: DateTime&#xa;- last_login: DateTime&#xa;- role: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3">
+          <mxGeometry y="26" width="160" height="144" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="3">
+          <mxGeometry y="170" width="160" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="+ register()&#xa;+ login()&#xa;+ update_profile()&#xa;+ logout()&#xa;+ reset_password()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3">
+          <mxGeometry y="178" width="160" height="102" as="geometry"/>
+        </mxCell>
+        
+        <!-- Project类 -->
+        <mxCell id="7" value="Project" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="160" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="- id: Integer&#xa;- name: String&#xa;- description: String&#xa;- owner: User&#xa;- collaborators: List&lt;User&gt;&#xa;- created_at: DateTime&#xa;- updated_at: DateTime&#xa;- is_public: Boolean&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7">
+          <mxGeometry y="26" width="160" height="144" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="7">
+          <mxGeometry y="170" width="160" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="+ create()&#xa;+ update()&#xa;+ delete()&#xa;+ add_collaborator()&#xa;+ remove_collaborator()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="7">
+          <mxGeometry y="178" width="160" height="102" as="geometry"/>
+        </mxCell>
+        
+        <!-- Requirement类 -->
+        <mxCell id="11" value="Requirement" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="160" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="- id: Integer&#xa;- title: String&#xa;- description: String&#xa;- project: Project&#xa;- creator: User&#xa;- status: String&#xa;- created_at: DateTime&#xa;- updated_at: DateTime&#xa;- ai_analysis: JSON" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="11">
+          <mxGeometry y="26" width="160" height="144" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="11">
+          <mxGeometry y="170" width="160" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="+ create()&#xa;+ update()&#xa;+ delete()&#xa;+ analyze()&#xa;+ generate_code()&#xa;+ generate_tests()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="11">
+          <mxGeometry y="178" width="160" height="102" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系 -->
+        <mxCell id="15" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="owns" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="15">
+          <mxGeometry x="0.5" y="49" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="17" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="7" target="11">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="has" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="17">
+          <mxGeometry x="0.5" y="49" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
