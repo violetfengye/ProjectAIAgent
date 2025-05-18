@@ -8,7 +8,7 @@ ProjectAIAgent 是一个基于人工智能的软件工程辅助平台，旨在�
 
 - 前端：Vue 3 + TypeScript + Ant Design Vue
 - 后端：Django + Python
-- AI 集成：OpenAI API
+- AI 集成：Deepseek API
 
 ## 主要功能
 
